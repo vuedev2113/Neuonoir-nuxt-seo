@@ -1,0 +1,12 @@
+query LatestRelease {
+  releases(last: 1) {
+    slug,
+    name,
+    artist {
+      name
+    },
+    image {
+      url
+    }
+  }
+}

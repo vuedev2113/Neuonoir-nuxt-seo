@@ -1,0 +1,8 @@
+query GetVariant($slug: String) {
+    variants(where: {productId: $slug}) {
+        productId
+        stock
+        variant
+        price
+    }
+}

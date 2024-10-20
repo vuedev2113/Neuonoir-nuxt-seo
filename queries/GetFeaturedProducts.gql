@@ -1,0 +1,16 @@
+query GetFeaturedProducts {
+    products(orderBy: order_ASC, first: 3) {
+        brand
+        image {
+            url
+        }
+        label
+        productId
+        sex
+        slug
+        title
+        type
+        subtype
+        order
+    }
+}

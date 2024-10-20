@@ -1,0 +1,15 @@
+query FeaturedPost {
+    posts(first: 1, orderBy: date_DESC) {
+        date
+        slug
+        title
+        excerpt
+        type
+        content {
+            text
+        }
+        image {
+            url
+        }
+    }
+}

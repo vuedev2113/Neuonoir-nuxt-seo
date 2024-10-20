@@ -1,0 +1,12 @@
+query HomePosts {
+    posts(first: 4, orderBy: date_DESC, skip: 1) {
+        date
+        slug
+        title
+        excerpt
+        type
+        content {
+            text
+        }
+    }
+}

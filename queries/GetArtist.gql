@@ -1,0 +1,42 @@
+query GetArtist($slug: String) {
+    artist(where: {slug: $slug}) {
+        name
+        genre
+        slug
+        description {
+            markdown
+        }
+        profileImage {
+            url
+        }
+        links {
+            ... on Link {
+                name
+                url
+                icon
+            }
+        }
+        posts {
+            slug
+            title
+            type
+            date
+        }
+        products {
+            ... on Product {
+                brand
+                title
+                image {
+                    url
+                }
+                properties
+                type
+                subtype
+                slug
+                label
+                sex
+                productId
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+query GetProducts {
+    products(orderBy: order_ASC, first: 100) {
+        brand
+        image {
+            url
+        }
+        label
+        productId
+        sex
+        slug
+        title
+        subtype
+        type
+    }
+}

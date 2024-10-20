@@ -1,0 +1,15 @@
+query GetMerch {
+    products(orderBy: order_ASC, where: {type: "T-Shirt"}) {
+        brand
+        image {
+            url
+        }
+        label
+        productId
+        sex
+        slug
+        title
+        subtype
+        type
+    }
+}

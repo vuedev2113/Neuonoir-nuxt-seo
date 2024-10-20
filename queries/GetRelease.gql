@@ -1,0 +1,43 @@
+query GetRelease($slug: String) {
+    release(where: {slug: $slug}) {
+        name
+        genre
+        date
+        properties
+        links {
+            url
+            name
+            icon
+        }
+        artist {
+            name
+            slug
+            links {
+                ... on Link {
+                    name
+                    url
+                    icon
+                }
+            }
+            products {
+                ... on Product {
+                    brand
+                    title
+                    image {
+                        url
+                    }
+                    properties
+                    type
+                    subtype
+                    slug
+                    label
+                    sex
+                    productId
+                }
+            }
+        }
+        image {
+            url
+        }
+    }
+}

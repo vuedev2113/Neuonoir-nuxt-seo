@@ -1,0 +1,15 @@
+query GetCassettes {
+    products(orderBy: order_ASC, where: {type: "Cassette"}) {
+        brand
+        image {
+            url
+        }
+        label
+        productId
+        sex
+        slug
+        title
+        subtype
+        type
+    }
+}

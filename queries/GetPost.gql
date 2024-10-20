@@ -1,0 +1,31 @@
+query GetPost($slug: String) {
+    post(where: {slug: $slug}) {
+        title
+        date
+        type
+        excerpt
+        content {
+            html
+        }
+        image {
+            url
+        }
+        artist {
+            name
+            slug
+            genre
+            description {
+                markdown
+            }
+            links {
+                ... on Link {
+                    url
+                    icon
+                }
+            }
+            profileImage {
+                url
+            }
+        }
+    }
+}

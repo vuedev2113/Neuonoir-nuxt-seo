@@ -1,0 +1,15 @@
+query Releases {
+    releases(orderBy: date_DESC, first: 100) {
+        image {
+            url
+        }
+        artist {
+            name
+        }
+        date
+        genre
+        name
+        slug
+        type
+    }
+}

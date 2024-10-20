@@ -1,0 +1,27 @@
+query Artists {
+    artists {
+        slug
+        createdAt
+        foundedIn
+        genre
+        previewImage {
+            id
+            url
+        }
+        id
+        description {
+            markdown
+        }
+        name
+        publishedAt
+        updatedAt
+        links {
+            ... on Link {
+                id
+                name
+                icon
+                url
+            }
+        }
+    }
+}

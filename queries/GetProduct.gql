@@ -1,0 +1,16 @@
+query GetProduct($slug: String) {
+    product(where: {slug: $slug}) {
+        brand
+        image {
+            url
+        }
+        label
+        productId
+        sex
+        slug
+        title
+        subtype
+        type
+        properties
+    }
+}

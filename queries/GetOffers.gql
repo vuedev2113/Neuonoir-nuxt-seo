@@ -1,0 +1,7 @@
+query GetOffers {
+    offers(first: 100) {
+        productId
+        price
+        stock
+    }
+}

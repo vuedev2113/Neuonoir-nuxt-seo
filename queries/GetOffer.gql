@@ -1,0 +1,7 @@
+query GetOffer($productId: String!) {
+    offer(where: {productId: $productId}) {
+        productId
+        price
+        stock
+    }
+}

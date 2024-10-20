@@ -1,0 +1,7 @@
+query GetShippings {
+    shippings(first: 100) {
+        provider
+        costEuro
+        countryIso2
+    }
+}
